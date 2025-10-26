@@ -1,8 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+:root{
+  color-scheme: light dark;
+  --backgroun-dark-mode: black;
+  --background-light-mode: white;
+  --text-dark-mode: white;
+  --text-light-mode: black;
+  --text-hover-dark-mode: rgb(48, 48, 48);
+  --text-hover-light-mode: rgb(220, 220, 220);
+}
+
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto Mono", monospace;
+}
+
 body {
   display: flex;
   flex-direction: column;
-  margin: 0;
+  background-color: light-dark(var(--background-light-mode), var(--background-dark-mode));
   height: 100vh;
+  width: 100vw;
+}
+
+main {
+  height: 100%;
+  width: 100%;
+}
+
+nav {
+  order: 1;
 }
 
 nav > ul {
@@ -14,6 +42,18 @@ nav > ul {
 nav > ul > li {
   flex: 1 1 auto;
   text-align: center;
+}
+
+nav > ul > li > a {
+  display: block;
+  padding: 1rem;
+  text-decoration: none;
+  color: light-dark(var(--text-light-mode), var(--text-dark-mode));
+  font-size: clamp(1rem, 2vw, 2rem);
+}
+
+nav > ul > li > a:hover {
+  background-color: light-dark(var(--text-hover-light-mode), var(--text-hover-dark-mode)); 
 }
 
 main {

@@ -1,0 +1,21 @@
+#stopwatch{
+    font-size: clamp(2rem, 8vw, 6rem);
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+x-stopwatch{
+    display: block;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 1rem;
+    background-color: light-dark(var(--text-hover-light-mode), var(--text-hover-dark-mode));
+    padding: 1rem;
+    text-align: center;
+}
+
+x-stopwatch time {
+}

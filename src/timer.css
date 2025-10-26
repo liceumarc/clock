@@ -1,0 +1,4 @@
+#timer{
+    margin: auto;
+    font-size: clamp(2rem, 8vw, 6rem);
+}

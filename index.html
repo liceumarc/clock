@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <title>Time</title>
     <link rel="stylesheet" href="./src/styles.css" />
+    <link rel="stylesheet" href="./src/clock.css">
+    <link rel="stylesheet" href="./src/alarm.css">
+    <link rel="stylesheet" href="./src/stopwatch.css" />
+    <link rel="stylesheet" href="./src/timer.css">
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
@@ -22,6 +26,7 @@
       <section id="clock">
         <x-clock>
           <time>00:00:00</time>
+          <time id="display-date"></time>
         </x-clock>
       </section>
       <section id="alarm">
@@ -82,5 +87,6 @@
       </section>
     </main>
     <script type="module" src="./src/app.js"></script>
+    <script src="./src/actualDate.js"></script>
   </body>
 </html>
