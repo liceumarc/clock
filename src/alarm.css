@@ -3,6 +3,6 @@
     font-size: clamp(2rem, 8vw, 6rem);
 }
 
-section.crontols > button {
-    font-size: 2rem;
+.material-icons{
+    font-size: 30px;
 }
