@@ -77,10 +77,6 @@ nav > ul > li > a > span:nth-child(2) {
   order: 2; 
 }
 
-nav > ul > li > a:hover {
-  background-color: light-dark(var(--text-hover-light-mode), var(--text-hover-dark-mode)); 
-}
-
 main {
   display: flex;
 }
@@ -88,3 +84,4 @@ main {
 main > section:not(:target) {
   display: none;
 }
+
