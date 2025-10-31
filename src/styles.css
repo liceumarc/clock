@@ -1,15 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
-:root{
-  color-scheme: light dark;
+
+:root {
+  color-scheme: dark light;
   --backgroun-dark-mode: black;
   --background-light-mode: white;
   --text-dark-mode: white;
   --text-light-mode: black;
   --text-hover-dark-mode: rgb(48, 48, 48);
   --text-hover-light-mode: rgb(220, 220, 220);
+  --color-icons-dark: #c5c0ca;
+  --color-icons-light: #35313a;
 }
 
-*{
+* {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
@@ -29,11 +32,16 @@ main {
   width: 100%;
 }
 
+a .material-icons{
+  font-size: clamp(2rem, 2.5vw, 3rem);
+  color: light-dark(var(--color-icons-light), var(--color-icons-dark));
+}
+
 nav {
   order: 1;
 }
 
-nav > ul {
+nav>ul {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -42,14 +50,14 @@ nav > ul {
   height: 100%;
 }
 
-nav > ul > li {
+nav>ul>li {
   text-align: center;
   margin: auto;
   width: 25%;
   height: 100%;
 }
 
-nav > ul > li > a {
+nav>ul>li>a {
   display: block;
   padding: 1rem;
   text-decoration: none;
@@ -58,30 +66,30 @@ nav > ul > li > a {
   height: 100%;
 }
 
-nav > ul > li > a > span {
+nav>ul>li>a>span {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-nav > ul > li > a > span:nth-child(1) {
+nav>ul>li>a>span:nth-child(1) {
   order: 1;
   padding-bottom: 1rem;
 }
 
-nav > ul > li > a > span > img {
+nav>ul>li>a>span>img {
   width: clamp(2rem, 3vw, 3rem);
 }
 
-nav > ul > li > a > span:nth-child(2) {
-  order: 2; 
+nav>ul>li>a>span:nth-child(2) {
+  order: 2;
 }
 
 main {
   display: flex;
 }
 
-main > section:not(:target) {
+main>section:not(:target) {
   display: none;
 }
 
