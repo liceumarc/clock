@@ -4,10 +4,8 @@
   color-scheme: dark light;
   --backgroun-dark-mode: black;
   --background-light-mode: white;
-  --text-dark-mode: white;
-  --text-light-mode: black;
-  --text-hover-dark-mode: rgb(48, 48, 48);
-  --text-hover-light-mode: rgb(220, 220, 220);
+  --text-dark-mode: 255, 255, 255;
+  --text-light-mode: 0, 0, 0;
   --color-icons-dark: #c5c0ca;
   --color-icons-light: #35313a;
 }
@@ -32,13 +30,14 @@ main {
   width: 100%;
 }
 
-a .material-icons{
+a .material-icons {
   font-size: clamp(2rem, 2.5vw, 3rem);
   color: light-dark(var(--color-icons-light), var(--color-icons-dark));
 }
 
 nav {
   order: 1;
+  margin-bottom: 10px;
 }
 
 nav>ul {
@@ -53,36 +52,20 @@ nav>ul {
 nav>ul>li {
   text-align: center;
   margin: auto;
-  width: 25%;
-  height: 100%;
+  flex: 1;
 }
 
 nav>ul>li>a {
-  display: block;
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
   padding: 1rem;
   text-decoration: none;
   color: light-dark(var(--text-light-mode), var(--text-dark-mode));
   font-size: clamp(1rem, 2vw, 2rem);
-  height: 100%;
-}
-
-nav>ul>li>a>span {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-nav>ul>li>a>span:nth-child(1) {
-  order: 1;
-  padding-bottom: 1rem;
-}
-
-nav>ul>li>a>span>img {
-  width: clamp(2rem, 3vw, 3rem);
-}
-
-nav>ul>li>a>span:nth-child(2) {
-  order: 2;
+  width: 85%;
 }
 
 main {
@@ -93,3 +76,35 @@ main>section:not(:target) {
   display: none;
 }
 
+@media (min-width: 841px) {
+
+  nav > ul > li > a:hover {
+    border-radius: 100px 100px 100px 100px;
+    padding: 0.7rem;
+    background-color: light-dark(rgba(var(--text-light-mode), 0.08), rgba(var(--text-dark-mode), 0.08))
+  }
+
+  nav > ul > li > a:focus {
+    border-radius: 100px 100px 100px 100px;
+    padding: 0.7rem;
+    background-color: light-dark(rgba(var(--text-light-mode), 0.12), rgba(var(--text-dark-mode), 0.12))
+  }
+
+}
+
+@media (max-width: 840px) {
+  nav>ul>li>a {
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.2rem;
+  }
+
+  nav a span:first-child {
+    border-radius: 30%;
+    padding: 0.6rem;
+  }
+
+  nav a span:first-child:hover {
+    background-color: light-dark(rgba(var(--text-light-mode), 0.08), rgba(var(--text-dark-mode), 0.08))
+  }
+}
