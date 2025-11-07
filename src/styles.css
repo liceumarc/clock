@@ -2,10 +2,10 @@
 
 :root {
   color-scheme: dark light;
-  --backgroun-dark-mode: black;
-  --background-light-mode: white;
-  --text-dark-mode: 255, 255, 255;
-  --text-light-mode: 0, 0, 0;
+  --backgroun-dark-mode: #121212;
+  --background-light-mode: #f5f5f5;
+  --text-dark-mode: 224, 224, 224;
+  --text-light-mode: 33, 33, 33;
   --color-icons-dark: #c5c0ca;
   --color-icons-light: #35313a;
 }
@@ -21,13 +21,13 @@ body {
   display: flex;
   flex-direction: column;
   background-color: light-dark(var(--background-light-mode), var(--background-dark-mode));
-  height: 100vh;
   width: 100vw;
+  height: 100vh;
 }
 
 main {
-  height: 100%;
   width: 100%;
+  flex: 1;
 }
 
 a .material-icons {
@@ -36,8 +36,13 @@ a .material-icons {
 }
 
 nav {
+  background-color: light-dark(rgba(var(--background-light-mode), 0.3, rgba(var(--background-dark-mode), 0.3)));
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+  position: sticky;
+  bottom: 0;
   order: 1;
-  margin-bottom: 10px;
+  flex: 0 0 10%;
 }
 
 nav>ul {
