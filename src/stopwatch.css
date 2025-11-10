@@ -12,7 +12,20 @@ x-stopwatch{
     left: 50%;
     transform: translate(-50%, -50%);
     border-radius: 1rem;
-    background-color: light-dark(var(--text-hover-light-mode), var(--text-hover-dark-mode));
+    background-color: #333;
     padding: 1rem;
     text-align: center;
 }
+
+x-stopwatch .controls .pause{
+    display: none;
+}
+
+x-stopwatch[start-time] .controls .pause{
+    display: inline-block;
+}   
+
+x-stopwatch[paused=""] .controls .pause{
+    display: none;
+}
+
