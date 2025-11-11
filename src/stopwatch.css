@@ -21,11 +21,15 @@ x-stopwatch .controls .pause{
     display: none;
 }
 
-x-stopwatch[start-time] .controls .pause{
+ x-stopwatch[start-time] .controls .pause{
     display: inline-block;
 }   
 
 x-stopwatch[paused=""] .controls .pause{
     display: none;
 }
+
+ x-stopwatch[start-time=""] .controls .pause{
+    display: none;
+}   
 

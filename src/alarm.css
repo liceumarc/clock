@@ -1,3 +1,11 @@
+.items{
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 25%));
+  justify-content: center;
+  align-items: center;
+}
+
 #alarm {
     margin: auto;
     font-size: clamp(3rem, 9vw, 7rem);
@@ -49,4 +57,16 @@ input[type="time"]:focus {
   padding: 0.6rem 1rem;
   display: inline-block;
   border-radius: 0.5rem;
+}
+
+.alarms[paused=""] .controls .pause{
+  display: none;
+}
+
+.alarms .controls .start{
+  display: none;
+}
+
+.alarms[paused=""] .controls .start{
+  display: inline-block;
 }
