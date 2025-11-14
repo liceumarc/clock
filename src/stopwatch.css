@@ -29,7 +29,14 @@ x-stopwatch[paused=""] .controls .pause{
     display: none;
 }
 
+x-stopwatch[start-time]:not([start-time=""])[paused=""] .controls .start{
+    display: inline-block;
+}
+
  x-stopwatch[start-time=""] .controls .pause{
     display: none;
 }   
 
+x-stopwatch[start-time]:not([start-time=""]) .controls .start{
+    display: none;
+}

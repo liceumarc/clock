@@ -88,6 +88,11 @@ main>section:not(:target) {
     padding: 0.7rem;
     background-color: light-dark(rgba(var(--text-light-mode), 0.08), rgba(var(--text-dark-mode), 0.08))
   }
+  
+  .resaltado{
+    border-radius: 100px 100px 100px 100px;
+    background-color: light-dark(rgba(var(--text-light-mode), 0.08), rgba(var(--text-dark-mode), 0.08))
+  }
 
   nav > ul > li > a:focus {
     border-radius: 100px 100px 100px 100px;
@@ -110,6 +115,11 @@ main>section:not(:target) {
   }
 
   nav a span:first-child:hover {
+    background-color: light-dark(rgba(var(--text-light-mode), 0.08), rgba(var(--text-dark-mode), 0.08))
+  }
+
+  .resaltado{
+    border-radius: 30%;
     background-color: light-dark(rgba(var(--text-light-mode), 0.08), rgba(var(--text-dark-mode), 0.08))
   }
 }

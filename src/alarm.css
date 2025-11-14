@@ -70,3 +70,14 @@ input[type="time"]:focus {
 .alarms[paused=""] .controls .start{
   display: inline-block;
 }
+
+.alarms[paused]{
+  color: #A0A0A0;
+}
+
+.alarms[paused] input{
+  color: #A0A0A0;           
+  border: 1px solid #A0A0A0;
+  border-radius: 4px;       
+}
+
