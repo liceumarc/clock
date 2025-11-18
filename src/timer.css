@@ -3,3 +3,52 @@
     font-size: clamp(2rem, 8vw, 6rem);
     background-color: #333;
 }
+
+x-timer{
+    display: block;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 1rem;
+    background-color: #333;
+    padding: 1rem;
+    text-align: center;
+}
+
+x-timer .controls .pause{
+    display: none;
+}
+
+ x-timer[start-time] .controls .pause{
+    display: inline-block;
+}   
+
+x-timer[paused=""] .controls .pause{
+    display: none;
+}
+
+x-timer[start-time]:not([start-time=""])[paused=""] .controls .start{
+    display: inline-block;
+}
+
+x-timer[start-time]:not([start-time=""]) .controls .start{
+    display: none;
+}
+
+x-timer[start-time=""] .controls .pause{
+    display: none;
+}
+
+x-timer[loop] .controls .loop{
+    border: 1px solid #fff;
+}
+
+x-timer[loop] .controls .no-loop{
+    border: none;
+}
+
+x-timer .controls .no-loop{
+    border: 1px solid #fff;
+}
+
